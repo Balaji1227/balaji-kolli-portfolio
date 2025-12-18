@@ -10,7 +10,7 @@ export default function ExperienceTimeline() {
     {
       role: "Systems Engineer",
       company: "Infosys",
-      duration: "Jun 2024 – Present",
+      duration: "Jan 2025 – Present",
       points: [
         "Built 50+ reusable React components, reducing development time by 25%",
         "Integrated 20+ REST APIs using Context-based global state",
@@ -21,7 +21,7 @@ export default function ExperienceTimeline() {
     {
       role: "Senior Systems Associate",
       company: "Infosys",
-      duration: "Jan 2024 – Apr 2025",
+      duration: "Jan 2024 – Jan 2025",
       points: [
         "Developed React & Angular UI workflows with modular architecture",
         "Improved responsive behavior using Flexbox and CSS Grid",
@@ -55,11 +55,9 @@ export default function ExperienceTimeline() {
 
   return (
     <section
-      id="experience"
-      className="px-6 py-20 max-w-5xl mx-auto text-white"
-    >
-      <h2 className="text-3xl font-bold mb-12">Experience</h2>
-
+  id="experience"
+  className="px-6 py-20 max-w-6xl mx-auto">
+      <h2 className="text-3xl font-bold mb-14 tracking-tight">Experience</h2>
       <div className="relative border-l border-slate-800 pl-8 space-y-12">
         {experiences.map((exp, index) => (
           <div key={index} className="relative">
