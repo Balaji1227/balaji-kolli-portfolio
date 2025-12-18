@@ -7,7 +7,7 @@ type ExperienceItem = {
 
 export default function ExperienceTimeline() {
   const experiences: ExperienceItem[] = [
-    {
+    { 
       role: "Systems Engineer",
       company: "Infosys",
       duration: "Jan 2025 – Present",
@@ -78,4 +78,5 @@ export default function ExperienceTimeline() {
       </div>
     </section>
   );
+  
 }
