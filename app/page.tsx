@@ -5,6 +5,7 @@ import Skills from "@/components/Skills";
 import Reveal from "@/components/Reveal";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Hero from "@/components/Hero";
 
 
 
@@ -14,45 +15,10 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-      <Navbar />
-
-      {/* HERO SECTION */}
       
-      <Reveal>
-       <main className="px-6 pt-28 pb-20 max-w-6xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
-           Frontend Engineer{" "}
-           <span className="text-sky-400">(React.js)</span>
-          </h1>
-
-           <p className="text-lg md:text-xl text-slate-400 max-w-3xl leading-relaxed">
-              Frontend Engineer with <span className="text-white font-medium">3.6+ years of experience</span>{" "}
-              building <span className="text-white font-medium">enterprise-scale React applications</span>{" "}
-              used across business-critical workflows.
-           </p>
-
-          <div className="mt-10 flex flex-wrap gap-8 text-sm text-slate-300">
-              <div>
-                 <p className="text-2xl font-semibold text-white">3.6+</p>
-                 <p className="uppercase tracking-wide text-slate-400">Years Experience</p>
-              </div>
-
-              <div>
-                <p className="text-2xl font-semibold text-white">50+</p>
-                <p className="uppercase tracking-wide text-slate-400">UI Components</p>
-              </div>
-
-              <div>
-                <p className="text-2xl font-semibold text-white">20+</p>
-                <p className="uppercase tracking-wide text-slate-400">APIs Integrated</p>
-              </div>
-          </div>
-
-        </main>
-      </Reveal>
-
-
-
+      <Navbar />
+      <Hero />
+      
 
       {/* PROJECTS SECTION */}
       <Reveal>
@@ -96,6 +62,7 @@ export default function Home() {
 
       <ExperienceTimeline />
       <Skills />
+
 
       <Contact />
       <Footer />
