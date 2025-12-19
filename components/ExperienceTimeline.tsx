@@ -58,24 +58,34 @@ export default function ExperienceTimeline() {
   id="experience"
   className="px-6 py-20 max-w-6xl mx-auto">
       <h2 className="text-3xl font-bold mb-14 tracking-tight">Experience</h2>
-      <div className="relative border-l border-slate-800 pl-8 space-y-12">
-        {experiences.map((exp, index) => (
-          <div key={index} className="relative">
-            <span className="absolute -left-[10px] top-2 w-4 h-4 bg-sky-500 rounded-full" />
+      <div className="relative pl-12 border-l border-slate-800">
+           {experiences.map((exp, index) => (
+        <div key={index} className="relative mb-12">
+      
+           {/* DOT */}
+         <span className="absolute -left-[7px] top-1 w-3 h-3 bg-sky-500 rounded-full ring-4 ring-slate-950" />
 
-            <h3 className="text-xl font-semibold">
-              {exp.role} – {exp.company}
-            </h3>
-            <p className="text-sm text-slate-400 mb-4">{exp.duration}</p>
+                {/* CONTENT WRAPPER */}
+         <div className="ml-6">
+              <h3 className="text-lg font-semibold leading-snug">
+                {exp.role} – {exp.company}
+                </h3>
 
-            <ul className="list-disc ml-5 space-y-2 text-slate-300 text-sm">
-              {exp.points.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+              <p className="text-sm text-slate-400 mb-3">
+                 {exp.duration}
+              </p>
+
+              <ul className="list-disc ml-5 space-y-2 text-slate-300 text-sm">
+                   {exp.points.map((point, i) => (
+                   <li key={i}>{point}</li>
+                  ))}
+               </ul>
+             </div>
+
+        </div>
+      ))}
+    </div>
+
     </section>
   );
   
