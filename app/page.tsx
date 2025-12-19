@@ -64,31 +64,30 @@ export default function Home() {
 
   <div className="grid md:grid-cols-2 gap-8">
     
-    {/* MOS Project */}
     <ProjectCard
-      title="MOS – Material Operations System"
-      description="Enterprise React application managing inventory, purchase requests, and delivery workflows."
-      points={[
-        "Built 50+ reusable React components",
-        "Integrated 20+ REST APIs",
-        "Role-based access & validations",
-        "Improved performance by ~40%",
-      ]}
-      caseStudyLink="/projects/mos"
-    />
+  title="MOS – Material Operations System"
+  description="Enterprise React application managing inventory, purchase requests, and delivery workflows."
+  href="/projects/mos"
+  points={[
+    "Built 50+ reusable React components",
+    "Integrated 20+ REST APIs",
+    "Role-based access & validations",
+    "Improved performance by ~40%",
+  ]}
+/>
 
-    {/* CHA Project */}
-    <ProjectCard
-      title="CHA – Clinical Health Assessment"
-      description="Healthcare dashboards and analytics platform for clinical teams."
-      points={[
-        "Redux-based global state management",
-        "Interactive charts & dashboards",
-        "Reduced load time by 30–45%",
-        "Improved accessibility & responsiveness",
-      ]}
-      caseStudyLink="/projects/cha"
-    />
+<ProjectCard
+  title="CHA – Clinical Health Assessment"
+  description="Healthcare dashboards and analytics platform for clinical teams."
+  href="/projects/cha"
+  points={[
+    "Redux & Context-based state management",
+    "Interactive charts & dashboards",
+    "Reduced load time by 30–45%",
+    "Improved accessibility & responsiveness",
+  ]}
+/>
+
 
   </div>
 </section>
