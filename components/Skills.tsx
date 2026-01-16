@@ -1,65 +1,78 @@
-import Reveal from "./Reveal";
-
-type SkillCategory = {
+type SkillGroup = {
   title: string;
   skills: string[];
 };
 
-
-
 export default function Skills() {
-  const categories: SkillCategory[] = [
+  const skillGroups: SkillGroup[] = [
     {
       title: "Frontend",
-      skills: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3"],
+      skills: [
+        "React.js",
+        "JavaScript (ES6+)",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+      ],
     },
     {
-      title: "State Management",
-      skills: ["Redux", "Context API"],
+      title: "State & Data",
+      skills: [
+        "Context API",
+        "Redux",
+        "REST APIs",
+        "Axios",
+      ],
     },
     {
       title: "UI Engineering",
       skills: [
-        "Component Architecture",
+        "Reusable Components",
         "Responsive Design",
-        "Flexbox",
-        "CSS Grid",
-        "Accessibility",
+        "Accessibility (a11y)",
+        "Performance Optimization",
       ],
     },
     {
-      title: "Tools",
-      skills: ["Git", "GitHub", "Azure DevOps", "Webpack", "Postman"],
-    },
-    {
-      title: "Cloud",
-      skills: ["Azure Static Web Apps", "CI/CD Pipelines"],
+      title: "Tools & Platforms",
+      skills: [
+        "Git",
+        "GitHub",
+        "Azure DevOps",
+        "CI/CD Pipelines",
+        "Vercel",
+      ],
     },
   ];
 
   return (
-    <Reveal>
     <section
       id="skills"
-      className="px-6 py-20 max-w-5xl mx-auto text-white"
+      className="px-6 py-20 max-w-6xl mx-auto"
     >
-      <h2 className="text-3xl font-bold mb-10">Skills</h2>
+      <h2 className="text-3xl font-bold mb-14 tracking-tight">
+        Skills
+      </h2>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        {categories.map((category, index) => (
+      <div className="grid md:grid-cols-2 gap-10">
+        {skillGroups.map((group, i) => (
           <div
-            key={index}
-            className="border border-slate-800 rounded-xl p-6"
+            key={i}
+            className="relative rounded-xl border border-slate-800 bg-slate-900/40 p-6"
           >
-            <h3 className="text-xl font-semibold mb-4">
-              {category.title}
+            {/* Glow */}
+            <div className="absolute inset-0 rounded-xl bg-sky-500/5 blur-xl opacity-0 hover:opacity-100 transition pointer-events-none" />
+
+            <h3 className="text-lg font-semibold mb-4 relative z-10">
+              {group.title}
             </h3>
 
-            <div className="flex flex-wrap gap-3">
-              {category.skills.map((skill, i) => (
+            <div className="flex flex-wrap gap-3 relative z-10">
+              {group.skills.map((skill, index) => (
                 <span
-                  key={i}
-                  className="px-4 py-1.5 rounded-full text-sm bg-slate-800 text-slate-200 hover:bg-sky-500 hover:text-black transition"
+                  key={index}
+                  className="px-4 py-1.5 text-sm rounded-full border border-slate-700 bg-slate-950 text-slate-300 hover:border-sky-500 hover:text-sky-400 transition"
                 >
                   {skill}
                 </span>
@@ -69,6 +82,5 @@ export default function Skills() {
         ))}
       </div>
     </section>
-    </Reveal>
   );
 }
